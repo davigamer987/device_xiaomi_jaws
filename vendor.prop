@@ -8,15 +8,34 @@
 ro.frp.pst=/dev/block/by-name/frp
 
 # Dolby
-ro.vendor.platform.support.dolbyvision=false
-vendor.media.support.dolbyvision=false
+ro.vendor.platform.support.dolbyvision=true
+vendor.media.support.dolbyvision=true
 
 ## NRDP
 ro.vendor.nrdp.audio.mixer.buffersize=1024
 ro.vendor.nrdp.modelgroup=deadpool
 
 ## SOC
-ro.soc.model=AMLS905Y4
+ro.soc.model=AMLS905X4
 
 ## Wi-Fi
 vendor.bcm_wifi=bcm
+
+## DTS
+ro.vendor.platform.support.dts=true
+
+## BT
+persist.vendor.rtkbt.bdaddr_path=none
+persist.vendor.bluetooth.prefferedrole=master
+persist.vendor.rtkbtadvdisable=false
+persist.vendor.btmodule=btmtk_usb
+persist.vendor.bt_vendor=libbt-vendor_mtk.so
+
+## Wifi
+vendor.wlan.def_wifi_chip=mt7663_usb
+ro.carrier=wifi-only
+wifi.interface=wlan0
+wifi.concurrent.interface=ap0
+wifi.direct.interface=p2p0
+wlan.dhcp.offer.ip=0
+wlan.wfd.api.mode=vendo

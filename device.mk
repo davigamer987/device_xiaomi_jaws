@@ -7,7 +7,7 @@
 TARGET_AMLOGIC_SOC := s4
 
 ## Bluetooth
-PRODUCT_PACKAGES += \
+# PRODUCT_PACKAGES += \
     libbt-vendor
 
 ## Factory
@@ -18,19 +18,13 @@ PRODUCT_HOST_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init-files/init.amlogic.wifi_buildin.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.wifi_buildin.rc
 
-## Kernel Modules
-PRODUCT_PACKAGES += \
-    dhd
 
 ## Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
-## Wi-Fi Firmware
-include hardware/amlogic/kernel-modules/dhd-driver/firmware/firmware.mk
-
 ## Inherit from the common tree product makefile
 $(call inherit-product, device/amlogic/ne-common/ne.mk)
 
 ## Inherit from the proprietary files makefile
-$(call inherit-product, vendor/khadas/kvim1s/kvim1s-vendor.mk)
+$(call inherit-product, vendor/xiaomi/jaws/jaws-vendor.mk)
